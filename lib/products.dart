@@ -25,7 +25,7 @@ class Products extends StatelessWidget {
                         builder: (BuildContext context) => ProductPage(
                             products[index]['title'],
                             products[index]['image']))).then((bool value){
-                              if(value){
+                              if(!value==null){
                                 deleteProduct(index);
                               }
                             }),
